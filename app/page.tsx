@@ -50,21 +50,30 @@ export default function Home() {
     <h2 className="text-3xl font-bold mb-8">Tjenester</h2>
     
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="bg-white p-6 rounded-lg shadow-lg shadow-slate-500">
+      {/* Studio Trening Card */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Studio Trening</h3>
-        <img src="/1.jpg" alt="Studio Trening" className="mb-4" />
+        <img src="/1.jpg" alt="Studio Trening" className="mb-4 rounded" />
+        <p className="text-gray-600">Opplev energiske gruppetimer med fokus på styrke og kondisjon.</p>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow-lg shadow-slate-500">
+      
+      {/* Personlig Trener Card */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Personlig Trener</h3>
-        <img src="/2.jpg" alt="Personlig Trener" className="mb-4" />
+        <img src="/4.jpg" alt="Personlig Trener" className="mb-4 rounded" />
+        <p className="text-gray-600">Få skreddersydd trening og kostholdsveiledning tilpasset dine mål.</p>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow-lg shadow-slate-500">
+      
+      {/* Gruppetrening Card */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Gruppetrening</h3>
-        <img src="/3.jpg" alt="Gruppetrening" className="mb-4" />
+        <img src="/3.jpg" alt="Gruppetrening" className="mb-4 rounded" />
+        <p className="text-gray-600">Bli med på morsomme og motiverende gruppetreninger!</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
      
