@@ -13,7 +13,7 @@ const Header = () => {
             <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
               Hjem
             </Link>
-            <Link href="/om-oss" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+            <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
               Om oss
             </Link>
             <Link href="/booking" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">

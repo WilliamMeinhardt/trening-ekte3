@@ -44,7 +44,7 @@ export default function Home() {
 </section>
 
 {/* Services Section */}
-<section className="py-12 bg-gray-100">
+<section className="py-12 bg-gray-100"> 
   <div className="max-w-6xl mx-auto text-center">
     {/* Heading for Services */}
     <h2 className="text-3xl font-bold mb-8">Tjenester</h2>
@@ -54,7 +54,11 @@ export default function Home() {
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Studio Trening</h3>
         <img src="/1.jpg" alt="Studio Trening" className="mb-4 rounded" />
-        <p className="text-gray-600">Opplev energiske gruppetimer med fokus på styrke og kondisjon.</p>
+        <p className="text-gray-600">ta treningen din til et neste nivaet med høy kvalitet mangfoldig utstyr.</p>
+        {/* Medlemskap button */}
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+          Medlemskap
+        </button>
       </div>
       
       {/* Personlig Trener Card */}
@@ -62,6 +66,10 @@ export default function Home() {
         <h3 className="text-xl font-bold mb-4">Personlig Trener</h3>
         <img src="/4.jpg" alt="Personlig Trener" className="mb-4 rounded" />
         <p className="text-gray-600">Få skreddersydd trening og kostholdsveiledning tilpasset dine mål.</p>
+        {/* Booking button */}
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+          Booking
+        </button>
       </div>
       
       {/* Gruppetrening Card */}
@@ -69,6 +77,10 @@ export default function Home() {
         <h3 className="text-xl font-bold mb-4">Gruppetrening</h3>
         <img src="/3.jpg" alt="Gruppetrening" className="mb-4 rounded" />
         <p className="text-gray-600">Bli med på morsomme og motiverende gruppetreninger!</p>
+        {/* Booking button */}
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+          Booking
+        </button>
       </div>
     </div>
   </div>
@@ -76,17 +88,9 @@ export default function Home() {
 
 
 
-     
-      <footer className="py-12 bg-blue-600 text-white">
-  <div className="max-w-6xl mx-auto px-4">
-    
 
-    {/* Additional Footer Information */}
-    <div className="mt-8 border-t border-blue-500 pt-4 text-blue-200 text-sm text-center">
-      <p>© 2024 FitFokus. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+     
+
 
 
     </div>
