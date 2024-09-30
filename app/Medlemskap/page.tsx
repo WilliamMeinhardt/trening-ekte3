@@ -2,27 +2,48 @@ import Link from "next/link";
 
 const Page = () => {
     return (
-        <div className="bg-gray-100 min-h-screen">
+        <div className="bg-gray-200 min-h-screen">
             <main className="pt-24 px-4">
 
-                <section className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4 text-black">Velkommen til FitFokus</h2>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-                        Hos oss får du kvalitetstrening til den beste prisen i markedet. 
-                        Enten med eller uten bindingstid - Vi kaller det høy puls til lav pris.
-                    </p>
-                </section>
+            <section className="bg-gray-200 text-black py-12"> 
+    <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-5xl font-extrabold mb-4">Velkommen til FitFokus</h2>
+        <p className="text-xl max-w-2xl mx-auto mb-8">
+            Hos oss får du kvalitetstrening til den beste prisen i markedet. 
+            Enten med eller uten bindingstid - Vi kaller det høy puls til lav pris.
+        </p>
+    </div>
 
-                <section className="mb-8">
-                    <img 
-                        src="/69.jpg" 
-                        alt="Training Equipment" 
-                        className="mx-auto rounded-lg shadow-lg max-w-full h-auto"
-                        style={{ maxHeight: '400px', objectFit: 'cover' }}
-                    />
-                </section>
+    <div className="flex justify-center mt-8">
+        <img
+            src="/69.jpg" 
+            alt="Training Equipment" 
+            className="rounded-lg shadow-lg max-w-full h-auto hover:shadow-xl"
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
+        />
+    </div>
 
-                <section className="text-center mb-12 bg-gray-50 py-10">
+    <div className="max-w-4xl mx-auto mt-10 text-center">
+        <h3 className="text-3xl font-bold mb-6">Hvorfor Velge FitFokus?</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold mb-2">Fleksible Alternativer</h4>
+                <p className="text-gray-700">Tren med eller uten bindingstid. Velg det som passer best for deg!</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold mb-2">Moderne Utstyr</h4>
+                <p className="text-gray-700">Tilgang til topp moderne treningsutstyr og fasiliteter.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold mb-2">Kvalifiserte Trenere</h4>
+                <p className="text-gray-700">Våre erfarne trenere er her for å hjelpe deg med å nå dine mål.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                <section className="text-center mb-12 bg-gray-200 py-10">
     <h3 className="text-4xl font-bold mb-6 text-black">Medlemskap og Priser</h3>
     <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
         Velg det medlemskapet som passer best for deg, og start reisen mot en sunnere livsstil. 
@@ -31,7 +52,7 @@ const Page = () => {
 
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:shadow-black transition-shadow duration-300">
             <div className="flex items-center mb-4">
                 <div className="bg-pink-500 text-white rounded-full p-2 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,7 +71,7 @@ const Page = () => {
         </div>
 
     
-        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:shadow-black transition-shadow duration-300">
             <div className="flex items-center mb-4">
                 <div className="bg-pink-500 text-white rounded-full p-2 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -7,6 +7,7 @@ import {
 import Link from "next/link";
 
 const Header = () => {
+  
     return (
       <header className="bg-white shadow-sm p-5 py-4 fixed w-full top-0 z-50 flex justify-center space-x-4">
 
