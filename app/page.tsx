@@ -54,7 +54,7 @@ export default function Home() {
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Studio Trening</h3>
         <img src="/1.jpg" alt="Studio Trening" className="mb-4 rounded" />
-        <p className="text-gray-600">ta treningen din til et neste nivaet med høy kvalitet mangfoldig utstyr.</p>
+        <p className="text-gray-600">ta treningen din til et neste nivaet med høy kvalitet mangfoldig.</p>
         {/* Medlemskap button */}
         <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
           Medlemskap

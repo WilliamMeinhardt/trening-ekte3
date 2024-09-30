@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-const about = () => {
+const Page = () => {
     return ( 
         <div>
-          {/* Hero Section */}
+          
           <section className="relative bg-cover bg-center h-[50vh]" style={{ backgroundImage: "url('/bg.jpg')" }}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
@@ -12,7 +12,6 @@ const about = () => {
             </div>
           </section>
     
-          {/* Introduction Section */}
           <section className="py-12 bg-gray-100 text-center">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-8">Vår Historie</h2>
@@ -25,7 +24,6 @@ const about = () => {
             </div>
           </section>
     
-          {/* Mission and Values Section */}
           <section className="py-12">
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">Vår Misjon og Verdier</h2>
@@ -40,26 +38,22 @@ const about = () => {
             </div>
           </section>
     
-          {/* Team Section */}
           <section className="py-12 bg-gray-100">
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">Møt Teamet Vårt</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Team Member 1 */}
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <img src="r.jpg" alt="Team Member 1" className="mb-4 rounded-full w-32 h-32 mx-auto" />
                   <h3 className="text-xl font-bold">the Rizzler</h3>
                   <p className="text-gray-600">Stilling: Personlig trener</p>
                   <p className="text-gray-700">The Rizzler tar deg fra sofa til beast mode! Mewing for kjeven, looksmaxing for stilen, og edging for å nå ditt fulle potensial.</p>
                 </div>
-                {/* Team Member 2 */}
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <img src="/p.jpg" alt="Team Member 2" className="mb-4 rounded-full w-32 h-32 mx-auto" />
                   <h3 className="text-xl font-bold">P diddy</h3>
                   <p className="text-gray-600">Stilling: Personlig trener</p>
                   <p className="text-gray-700">god på utoldnhet, dyktig i smidig og effektiv trening ved hjelp av babyolje.</p>
                 </div>
-                {/* Team Member 3 */}
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <img src="/a.jpg" alt="Team Member 3" className="mb-4 rounded-full w-32 h-32 mx-auto" />
                   <h3 className="text-xl font-bold">Aslak Grytøyr</h3>
@@ -70,7 +64,6 @@ const about = () => {
             </div>
           </section>
     
-          {/* Call to Action */}
           <section className="py-12 text-center">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-bold mb-4">Bli Medlem i Dag!</h2>
@@ -80,8 +73,7 @@ const about = () => {
             </div>
           </section>
         </div>
-        
       );
     }; 
  
-export default about;
+export default Page;
