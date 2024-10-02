@@ -9,19 +9,19 @@ import Link from "next/link";
 const Header = () => {
   
     return (
-      <header className="bg-white shadow-sm p-5 py-4 fixed w-full top-0 z-50 flex justify-center space-x-4">
+      <header className="bg-gray-200 shadow-sm p-5 py-8 top-0 fixed w-full z-50 flex justify-center space-x-4">
 
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
-            <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+            <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
               Hjem
             </Link>
-            <Link href="/om-oss" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+            <Link href="/om-oss" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
               Om oss
             </Link>
-            <Link href="/booking" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+            <Link href="/booking" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
               Booking
             </Link>
-            <Link href="/medlemskap" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
+            <Link href="/medlemskap" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
               Medlemskap
             </Link>
         </div>
