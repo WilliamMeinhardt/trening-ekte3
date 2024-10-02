@@ -1,10 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 
-const db = new PrismaClient();
-
 export default async function Page() {
-  const trainers = await db.trainer.findMany();
 
   return(
       <div>
@@ -47,14 +44,18 @@ export default async function Page() {
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Møt Teamet Vårt</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {trainers?.map((x: any, i: any) => {
+            {/*   {trainers?.map((x: any, i: any) => {
                 return(
                   <div key={i} className="bg-white p-6 rounded-lg shadow-lg">
                     <img src="a.jpg" alt={x.name} className="mb-4 rounded-full w-32 h-32 mx-auto" />
                     <h3 className="text-xl font-bold">{x.name}</h3>
-                    <p className="text-gray-700">{x.email}</p>
+                    <h2 className="text-gray-500">stilling: Personlig trener</h2>
+              
+                    
                   </div>
                 )})}
+
+                */}
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <img src="r.jpg" alt="Team Member 1" className="mb-4 rounded-full w-32 h-32 mx-auto" />
                 <h3 className="text-xl font-bold">the Rizzler</h3>
