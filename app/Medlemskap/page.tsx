@@ -119,14 +119,7 @@ const Page = () => {
                     </div>
                 </section>
 
-                <section className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-6 text-black">SIKKERHETSREGLER</h2>
-                    <ol className="list-decimal list-inside text-left max-w-2xl mx-auto space-y-2 text-gray-800">
-                        <li>Bruk av Utstyr: Følg alltid instruksjonene for bruk av treningsutstyr. Spør personalet om hjelp hvis du er usikker.</li>
-                        <li>Rydding: Sett tilbake vekter og annet utstyr etter bruk for å unngå snublefare.</li>
-                        <li>Hygiene: Bruk håndkle på treningsapparater og rengjør utstyr etter bruk.</li>
-                    </ol>
-                </section>
+                
             </main>
         </div>
     )

@@ -3,7 +3,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
 <section className="relative bg-cover bg-center h-[70vh]" style={{ backgroundImage: "url('/tre.jpg')" }}>
   <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -20,10 +19,8 @@ export default function Home() {
 </section>
 
 
-      {/* Promo Section */}
       <section className="py-12 bg-white text-center">
   <div className="max-w-6xl mx-auto">
-    {/* Single Box with Shared Padding */}
     <div className="bg-pink-500 p-6 rounded-lg shadow-lg shadow-slate-500">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex justify-center flex-col">
@@ -43,44 +40,36 @@ export default function Home() {
   </div>
 </section>
 
-{/* Services Section */}
 <section className="py-12 bg-gray-100"> 
   <div className="max-w-6xl mx-auto text-center">
-    {/* Heading for Services */}
     <h2 className="text-3xl font-bold mb-8">Tjenester</h2>
     
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* Studio Trening Card */}
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Studio Trening</h3>
         <img src="/1.jpg" alt="Studio Trening" className="mb-4 rounded" />
         <p className="text-gray-600">ta treningen din til et neste nivaet med høy kvalitet mangfoldig.</p>
-        {/* Medlemskap button */}
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
-          Medlemskap
-        </button>
+        <Link href="/medlemskap" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
+              Medlemskap
+            </Link>
       </div>
       
-      {/* Personlig Trener Card */}
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Personlig Trener</h3>
         <img src="/4.jpg" alt="Personlig Trener" className="mb-4 rounded" />
         <p className="text-gray-600">Få skreddersydd trening og kostholdsveiledning tilpasset dine mål.</p>
-        {/* Booking button */}
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
-          Booking
-        </button>
+        <Link href="/booking" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
+              Booking
+            </Link>
       </div>
       
-      {/* Gruppetrening Card */}
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <h3 className="text-xl font-bold mb-4">Gruppetrening</h3>
         <img src="/3.jpg" alt="Gruppetrening" className="mb-4 rounded" />
         <p className="text-gray-600">Bli med på morsomme og motiverende gruppetreninger!</p>
-        {/* Booking button */}
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
-          Booking
-        </button>
+        <Link href="/booking" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4">
+              Booking
+            </Link>
       </div>
     </div>
   </div>
