@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type ClassInfo = {
   id: number;
@@ -26,6 +26,35 @@ const Booking: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [isConfirmed, setIsConfirmed] = useState<boolean>(false);
 
+  // Laste inn tidligere booking-data fra localStorage
+  useEffect(() => {
+    const storedBooking = localStorage.getItem("bookingInfo");
+    if (storedBooking) {
+      const bookingData = JSON.parse(storedBooking);
+      setSelectedClass(bookingData.selectedClass || null);
+      setSelectedPT(bookingData.selectedPT || null);
+      setSelectedDate(bookingData.selectedDate || "");
+      setSelectedTime(bookingData.selectedTime || "");
+      setUserName(bookingData.userName || "");
+      setEmail(bookingData.email || "");
+      setIsConfirmed(bookingData.isConfirmed || false);
+    }
+  }, []);
+
+  // Oppdater localStorage når bookinginformasjonen endres
+  useEffect(() => {
+    if (isConfirmed) return; // Ikke lagre hvis booking er bekreftet
+    localStorage.setItem("bookingInfo", JSON.stringify({
+      selectedClass,
+      selectedPT,
+      selectedDate,
+      selectedTime,
+      userName,
+      email,
+      isConfirmed,
+    }));
+  }, [selectedClass, selectedPT, selectedDate, selectedTime, userName, email, isConfirmed]);
+
   const classes: ClassInfo[] = [
     { id: 1, name: "Yoga", description: "En avslappende yogaøkt.", image: "/yog.jpg", availableSpots: 5 },
     { id: 2, name: "Styrketrening", description: "Bygg styrke med intensiv trening.", image: "/styr.jpg", availableSpots: 8 },
@@ -42,6 +71,17 @@ const Booking: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsConfirmed(true);
+    
+    // Lagre bekreftelse i localStorage
+    localStorage.setItem("bookingInfo", JSON.stringify({
+      selectedClass,
+      selectedPT,
+      selectedDate,
+      selectedTime,
+      userName,
+      email,
+      isConfirmed: true,
+    }));
   };
 
   return (
@@ -145,9 +185,8 @@ const Booking: React.FC = () => {
                       required
                     />
                   </div>
-
                   <div className="w-1/2">
-                    <label className="block text-lg text-gray-700 mb-2">Velg Tidspunkt</label>
+                    <label className="block text-lg text-gray-700 mb-2">Velg Tid</label>
                     <input
                       type="time"
                       value={selectedTime}
@@ -158,17 +197,15 @@ const Booking: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105"
-                  >
-                    Bekreft Booking
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-200"
+                >
+                  Bekreft Booking
+                </button>
               </form>
             ) : (
-              <p className="text-center text-gray-500">Vennligst velg en gruppetime eller en PT for å fortsette.</p>
+              <p className="text-center text-gray-500 mt-4">Vennligst velg en gruppe- eller PT-time for å fortsette.</p>
             )}
           </>
         ) : (
