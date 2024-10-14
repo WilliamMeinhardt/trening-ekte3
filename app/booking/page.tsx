@@ -26,7 +26,6 @@ const Booking: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [isConfirmed, setIsConfirmed] = useState<boolean>(false);
 
-  // Laste inn tidligere booking-data fra localStorage
   useEffect(() => {
     const storedBooking = localStorage.getItem("bookingInfo");
     if (storedBooking) {
@@ -41,9 +40,8 @@ const Booking: React.FC = () => {
     }
   }, []);
 
-  // Oppdater localStorage når bookinginformasjonen endres
   useEffect(() => {
-    if (isConfirmed) return; // Ikke lagre hvis booking er bekreftet
+    if (isConfirmed) return;
     localStorage.setItem("bookingInfo", JSON.stringify({
       selectedClass,
       selectedPT,
@@ -72,7 +70,6 @@ const Booking: React.FC = () => {
     e.preventDefault();
     setIsConfirmed(true);
     
-    // Lagre bekreftelse i localStorage
     localStorage.setItem("bookingInfo", JSON.stringify({
       selectedClass,
       selectedPT,
