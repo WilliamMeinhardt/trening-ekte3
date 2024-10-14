@@ -1,11 +1,8 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Development](#development)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
